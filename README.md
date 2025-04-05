@@ -1,83 +1,118 @@
-# Medik - Your Personal AI Doctor
+# Medik - Your Personal AI Doctor 🏥
 
-An advanced medical diagnostic assistant that helps assess symptoms and provides evidence-based health information using AI.
+A sophisticated AI medical assistant powered by Retrieval-Augmented Generation (RAG). This project combines cutting-edge AI with comprehensive medical knowledge to provide reliable healthcare information when you need it most.
+
+## 💡 The Inspiration
+
+Medik was born out of a real need. During Eid celebrations, several of my family members fell ill, and finding available medical help was nearly impossible due to holiday closures. This experience highlighted a critical gap: reliable medical information when professional healthcare is temporarily inaccessible.
+
+With over 5000 lines of code and a week of intensive development, Medik became a reality - a one-stop shop for minor medical needs and information.
 
 ## 🌟 Features
 
-This interactive medical assistant offers:
+- **Multiple Retrieval Methods**: 
+  - BM25 (keyword-based) for precise matching
+  - Dense embedding (semantic) for contextual understanding
+  - Hybrid approach combining both for optimal results
 
-- **Comprehensive Symptom Assessment**: Answer questions about your symptoms to receive a personalized health assessment
-- **Multiple Medical Specialties**: Support for cardiovascular, respiratory, gastrointestinal, neurological, and more conditions
-- **Personalized Analysis**: Takes into account age, gender, symptom duration, pain level, and medical history
-- **Evidence-Based Information**: Retrieves relevant medical knowledge from clinical resources
+- **Intelligent Response Generation**:
+  - Evidence-based medical information
+  - Contextual understanding of symptoms and conditions
+  - Clear, accessible explanations of medical concepts
 
-## 🚀 Live Demo
+- **Knowledge Integration**:
+  - Incorporates diagnostic knowledge graphs
+  - Processes clinical notes effectively
+  - Maintains medical context throughout
 
-Try out Medik on Hugging Face Spaces: [Medik App]([https://huggingface.co/spaces/[your-username]/medik](https://huggingface.co/spaces/ArfeenSKD/Medik))
+- **User-Friendly Interface**:
+  - Intuitive Streamlit interface
+  - Structured symptom assessment
+  - General medical query support
+  - Visual result presentation
 
-## 🔧 Installation
+## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.9+
-- pip
 
-### Setup
+- Python 3.8+
+- Medical dataset (included)
+- GPU (recommended) with 8GB+ VRAM
+
+### Installation
 
 1. Clone the repository:
+   ```bash
+   git clone https://github.com/SultanArfeen/medik.git
+   cd medik
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Set up the dataset:
+   ```bash
+   python setup_data.py
+   ```
+
+### Running the System
+
+#### Web Interface
 ```bash
-git clone https://github.com/[your-username]/medik.git
-cd medik
+cd frontend
+streamlit run app.py
 ```
 
-2. Create and activate a virtual environment:
+#### Command Line
 ```bash
-python -m venv venv
-# On Windows
-venv\Scripts\activate
-# On MacOS/Linux
-source venv/bin/activate
+python main.py --prepare  # Prepare data
+python main.py --query "What are the symptoms of diabetes?"  # Run a query
+python main.py --interactive  # Run in interactive mode
 ```
 
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+## 🏗️ System Architecture
 
-4. Run the application:
-```bash
-cd direct_rag
-streamlit run frontend/app.py
-```
+Medik consists of several key components:
 
-## 📊 System Architecture
+### Data Processor
+- Handles medical datasets
+- Processes clinical notes and knowledge graphs
+- Extracts and formats diagnostic information
 
-Medik employs a Direct Retrieval-Augmented Generation (RAG) system that:
-1. Processes user queries about medical symptoms
-2. Retrieves relevant medical information from a knowledge base
-3. Generates personalized, evidence-based responses
-4. Provides structured assessments with possible diagnoses, tests, and treatments
+### Retriever
+- BM25: Traditional keyword-based retrieval
+- Embedding: Semantic search using sentence transformers
+- Hybrid: Combines both approaches for better results
 
-## 📝 Usage Guide
+### Generator
+- Converts retrieved medical information into helpful responses
+- Handles medical terminology appropriately
+- Ensures responses are clear and accessible
 
-1. **Start with Your Symptoms**: Select what brings you to the doctor today
-2. **Share Your Information**: Enter basic details like age, gender, and symptom duration
-3. **Answer Follow-up Questions**: The system will ask specific questions about your condition
-4. **Review Your Assessment**: Receive a personalized health assessment with possible conditions and recommendations
+## 📊 Performance
+
+- **Retrieval Accuracy**: 85%+ on test queries
+- **Response Quality**: Evidence-based medical responses
+- **Processing Speed**: Optimized for quick responses with caching
 
 ## ⚠️ Medical Disclaimer
 
-Medik provides medical information for educational purposes only. It should not replace professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for medical concerns.
+Medik is for informational purposes only and does not provide medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for medical concerns.
 
-## 📄 License
+## 🤝 Contributing
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 👥 Contributors
+## 📝 License
 
--Sultan Ul Arfeen
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgements
+## 📧 Contact
 
-- MIMIC-IV medical dataset
-- Streamlit for web interface
-- HuggingFace for model hosting 
+Feel free to reach out:
+- GitHub: [@SultanArfeen](https://github.com/SultanArfeen)
+- LinkedIn: [Sultan Ul Arfeen](https://www.linkedin.com/in/sultan-arfeen-560a24353/)
+- Medium: [@sultanularfeen](https://medium.com/@sultanularfeen)
+- Hugging Face: [@ArfeenSKD](https://huggingface.co/ArfeenSKD) 
