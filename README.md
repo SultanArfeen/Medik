@@ -13,7 +13,7 @@ This interactive medical assistant offers:
 
 ## 🚀 Live Demo
 
-Try out Medik on Hugging Face Spaces: [Medik App](https://huggingface.co/spaces/[your-username]/medik)
+Try out Medik on Hugging Face Spaces: [Medik App]([https://huggingface.co/spaces/[your-username]/medik](https://huggingface.co/spaces/ArfeenSKD/Medik))
 
 ## 🔧 Installation
 
@@ -74,8 +74,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👥 Contributors
 
-- [Your Name]
-- [Other Contributors]
+-Sultan Ul Arfeen
 
 ## 🙏 Acknowledgements
 
